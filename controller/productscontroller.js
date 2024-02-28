@@ -1,10 +1,5 @@
 import { getProducts, getProduct, deleteProduct } from '../models/db.js';
 
-
-
-
-
-
 export default {
     getAllProducts : async (req, res)=>{
         res.send(await getProducts())

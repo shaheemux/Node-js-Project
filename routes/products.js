@@ -16,16 +16,17 @@ import controller from '../controller/productscontroller.js'
     .delete(controller.delProduct)
 
 
+
+export default router
+
 //  router.get('/', getMessage)
-
-//  router.post('/', postMessage)
- 
-//  router.delete('/', deleteMessage)
-
-//  router.patch('/', updateMessage)
-
-//  router.put('/', addMessage)
-
-
-
- export default router
+    
+    //  router.post('/', postMessage)
+     
+    //  router.delete('/', deleteMessage)
+    
+    //  router.patch('/', updateMessage)
+    
+    //  router.put('/', addMessage)
+    
+    
