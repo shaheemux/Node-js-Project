@@ -1,4 +1,4 @@
-import { getProducts, getProduct, deleteProduct, addProduct} from '../models/db.js';
+import { getProducts, getProduct, deleteProduct, addProduct, editProduct} from '../models/db.js';
 
 export default {
     getAllProducts : async (req, res)=>{
@@ -14,7 +14,7 @@ export default {
         res.send(await getProducts())
     },
     addProduct:async(req,res)=>{
-        const { prod_name, quantity, amount, category, prod_url} = req.body;
+        const { prod_name, quantity, price, description, prod_url} = req.body;
         const post = await addProduct(prod_name, quantity, price, description, prod_url);
         res.send(await getProducts());  
     },

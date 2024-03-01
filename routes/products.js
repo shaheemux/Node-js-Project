@@ -13,7 +13,7 @@ import controller from '../controller/productscontroller.js'
     router.route('/:id')
     .get(controller.singleProduct)
     .delete(controller.delProduct)
-    // .patch(controller.editProduct)
+    .patch(controller.editProd)
 
 export default router
 
