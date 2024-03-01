@@ -74,10 +74,10 @@ const editUser =async(First_name,Last_name,User_age,Gender,User_role,Email_add,U
     //     "User_Profile": "S.S"
     //   }
 
-const addUser=async(prod_name,quantity,price,description,prod_url)=>{
+const addUser=async(UserId,First_name,Last_name,User_age,Gender,User_role,Email_add,User_pass,User_Profile)=>{
     await pool.query(`
-    INSERT INTO Users (prod_name,quantity,price,description,prod_url) values(?,?,?,?,?) `,
-    [prod_name,quantity,price,description,prod_url])
+    INSERT INTO Users (UserId,First_name,Last_name,User_age,Gender,User_role,Email_add,User_pass,User_profile) values(?,?,?,?,?,?,?,?,?) `,
+    [UserId,First_name,Last_name,User_age,Gender,User_role,Email_add,User_pass,User_Profile])
 }
 // console.log(await getProducts())
 

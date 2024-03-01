@@ -3,6 +3,8 @@ import cors from "cors";
 import { config } from 'dotenv'
 import productsRoute from './routes/products.js'
 import usersRoute from './routes/users.js'
+import bcrypt from 'bcrypt'
+import jwt from 'jsonwebtoken'
 config()
 
 
@@ -16,7 +18,9 @@ app.use(express.static( 'public' ))
 app.use('/products', productsRoute)
 app.use('/users', usersRoute) 
 
- 
+
+
+
 
 app.listen(port, ()=> {
     console.log(`Server is running on http://localhost:${port}`)

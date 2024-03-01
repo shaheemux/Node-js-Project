@@ -15,8 +15,8 @@ export default {
     },
 
     addUser:async(req,res)=>{
-        const { prod_name, quantity, price, description, prod_url } = req.body;
-        const post = await addUser(prod_name, quantity, amount, category, prod_url);
+        const {UserId,First_name,Last_name,User_age,Gender,User_role,Email_add,User_pass,User_profile} = req.body;
+        const post = await addUser(UserId,First_name,Last_name,User_age,Gender,User_role,Email_add,User_pass,User_profile);
         res.send(await getUsers());  
     },
 
